@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Практическая_8
 {
-    class Ball : IComparable
+    class Ball : IComparable,IFigure
     {
-        public int volume, r;
+        private int r;
+        public double volume;
         public int R
         {
             get
@@ -36,7 +37,10 @@ namespace Практическая_8
             return 0;
         }
 
-
+        public double V()
+        {
+            return Math.Pow(r, 3) * 4 * 3.14 / 3;
+        }
     }
 }
     

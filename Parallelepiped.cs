@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Практическая_8
 {
-    class Parallelepiped : IComparable
+    class Parallelepiped : IComparable,IFigure
     {
-        public int volume, a, b, c;
+        private int a, b, c;
+        public double volume;
         public int A
         {
             get
@@ -61,6 +62,11 @@ namespace Практическая_8
             if (this.volume > temp.volume) return 1;
             if (this.volume < temp.volume) return -1;
             return 0;
+        }
+
+        public double V()
+        {
+            return a * b * c;
         }
     }
 }

@@ -31,14 +31,14 @@ namespace Практическая_8
         {
 
             //получаем длину,ширину и высоту параллелепипеда
-            int a = Convert.ToInt32(A.Text);
-            int b = Convert.ToInt32(B.Text);
-            int c = Convert.ToInt32(C.Text);
-            parall.volume = a * b * c;
+            parall.A = Convert.ToInt32(A.Text);
+            parall.B = Convert.ToInt32(B.Text);
+            parall.C = Convert.ToInt32(C.Text);
+            parall.volume = parall.V();
 
             double p = 3.14;
-            int r = Convert.ToInt32(R.Text);//получаем радиус шара
-            ball.volume = Convert.ToInt32((Math.Pow(r, 3) * 4 * p) / 3);//вычисляем объем шара
+            ball.R = Convert.ToInt32(R.Text);//получаем радиус шара
+            ball.volume = ball.V();//вычисляем объем шара
 
             //записываем объем фигур в текстбоксы
             Inform.Text = "Объем:" + parall.volume.ToString();
